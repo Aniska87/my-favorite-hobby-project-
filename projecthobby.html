@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My hobby🎤</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90.3deg,
+          rgb(255, 255, 255) 3%,
+          rgb(235, 158, 98) 34.6%,
+          rgb(177, 10, 10) 63.7%,
+          rgb(0, 0, 0) 102%
+        );
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid black;
+        background: red;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: black;
+        cursor: pointer;
+      }
+      .order-button {
+        background:red;
+        color: white;
+        display: block;
+        margin: 30px auto;
+        width: 90%;
+        border-radius: 50px;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: bold;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+        border: 1px solid transparent white;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .singing-intro-picture {
+        border-radius: 10px;
+        transform: all 150ms ease-in-out;
+      }
+      .singing-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: black;
+      }
+      .dark.container {
+        background: #fef7f2;
+      }
+      .dark h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark theme</button>
+    <div class="container">
+      <h1>🎤What is Singing?</h1>
+      <h2>My favorite type of Singing</h2>
+      <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/577/original/slank2.jpg?1726959450"
+          alt=""
+          class="singing-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/848/original/deni.jpg?1727181869"
+          alt=""
+          class="singing-intro-picture"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/847/original/nane.jpg?1727181780"
+          alt=""
+          class="singing-intro-picture"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/846/original/black.jpg?1727181767"
+          alt=""
+          class="singing-intro-picture"
+        />
+        <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/576/original/slank_1.jpg?1726959435"
+        alt="" class="singing-intro-picture"
+      </div>
+    </div>
+    <p>
+      Singing is the act of creating musical sounds with the voice.A person
+      whose profession is singing is called a singer, artist or vocalist (in
+      jazz and/or popular music). Singers perform music (arias, recitatives,
+      songs, etc.) that can be sung with or without accompaniment by musical
+      instruments.
+      <br /><br />
+      📖
+      <a href="https://en.wikipedia.org/wiki/Singing">
+        <strong> Read on Wikipedia </strong>
+      </a>
+    </p>
+    <button id="order-button" class="order-button">
+        Get in touch for a private class
+      </button>
+    <footer>
+      Coded with 💖 by
+      <a
+        href="https://www.linkedin.com/in/aniska-prestia-schake-aa2a7b32a/"
+        target="_blank"
+        >Aniska Schake</a
+      >
+    </footer>
+    <script>
+function order() {
+        let quanty = prompt(" Do you like singing?");
+        let name = prompt("What is your first name?");
+        let email= prompt("What is your email address?")
+
+        alert(
+          "Thanks" + "  " + name + " " +
+            "We'll be in touch soon with more detils. Feel free to contact us if you have any questions 01010101"
+        );
+      }
+      function changeTheme (){
+        let body =document.querySelector("body");
+        
+
+        if (body.classList.contains("dark")){
+          body.classList.remove ("dark");
+        } else {
+            body.classList.add("dark");
+          }
+        }
+        let  button =document.querySelector("#order-button");
+        button.addEventListener("click",order);
+
+      let themeButton =document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      
+    </script>
+    </body>
+  </body>
+</html>
